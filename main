@@ -1,0 +1,11 @@
+import pandas as pd
+df = pd.read_csv('train.csv')
+print(len(df[pd.isnull(df['bdate'])]))
+df['bdate'].fillna("Unknown", inplace=True)
+df['sex'].fillna("Unknown", inplace=True)
+print(df['has_photo'])
+print(df['has_mobile'])
+print(df['result'] == 1)
+
+print(df.head())
+#Узнать можно любую информацию если есть хорошие навыки
